@@ -1,0 +1,16 @@
+<h1>Users new</h1>
+
+<div> 
+  <%= form_with model: @user do |form| %>
+    <p><%= form.label :name, 'Name' %></p>
+    <p><%= form.text_field :name%></p>
+
+    <p><%= form.label :email, 'Email' %></p>
+    <p><%= form.text_field :email%></p>
+
+    <p><%= form.label :tag, 'Tagname' %></p>
+    <p><%= form.text_field :tag %></p>
+
+    <p><%= form.submit %></p>
+  <% end %>
+</div>
