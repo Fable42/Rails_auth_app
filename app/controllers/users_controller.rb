@@ -6,8 +6,10 @@ class UsersController < ApplicationController
   def create
     user_params = params.require(:user).permit(:name, :email, :tag)
 
-    User.create(user_params)
+    user = User.create(user_params)
 
-    redirect_to new_session_path
+    session[:user_id] = user.id
+
+    redirect_to root_path
   end
 end
