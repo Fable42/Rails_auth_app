@@ -1,4 +1,6 @@
 class ApplicationController < ActionController::Base
+
+  helper_method: current_user
   private
 
  # фунция которая определяен айди юзера с нынешней сиссии или возвращает нил елси это гость (||= или равно)
