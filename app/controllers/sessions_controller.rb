@@ -5,14 +5,15 @@ class SessionsController < ApplicationController
   def create
     user_params = params.require(:session)
 
-    user = User.find_by(email: user_params[:email])
+    # &. помогает не ловить ошибку если user == nill
+    user = User.find_by(email: user_params[:email])&.authenticate(user_params[:password])
 
     if user.present?
       session[:user_id] = user.id
 
       redirect_to root_path
     else
-      redirect_to new_user_path
+      render :new
     end
   end
 

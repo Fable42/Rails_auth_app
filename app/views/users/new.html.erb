@@ -11,6 +11,11 @@
     <p><%= form.label :tag, 'Tagname' %></p>
     <p><%= form.text_field :tag %></p>
 
+    <p><%= form.label :password, 'Password' %></p>
+    <p><%= form.password_field :password %></p>
+
     <p><%= form.submit %></p>
+
+    <%= link_to 'Sign in', new_session_path %>
   <% end %>
 </div>
