@@ -1,0 +1,9 @@
+<h1> Main page</h1>
+
+<div>
+  <% if current_user.present? %>
+    <%=  current_user.name %>
+  <% else %>
+    <%= link_to 'Unknown user, please sign up', new_user_path %>
+  <% end %>
+</div>
