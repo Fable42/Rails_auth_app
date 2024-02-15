@@ -14,6 +14,9 @@
     <p><%= form.label :password, 'Password' %></p>
     <p><%= form.password_field :password %></p>
 
+    <p><%= form.label :password_confirmation, 'Repeat password' %></p>
+    <p><%= form.password_field :password_confirmation %></p>
+
     <p><%= form.submit %></p>
 
     <%= link_to 'Sign in', new_session_path %>
