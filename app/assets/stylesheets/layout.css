@@ -1,0 +1,28 @@
+body{
+  background: black;
+  display: flex;
+  justify-content: center;
+}
+
+.wrapper_sign_in_up {
+  max-width: 275px;
+}
+
+.wrapper {
+  max-width: 1200px;
+}
+
+.center-w {
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  margin-top: 30%;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+}
+
