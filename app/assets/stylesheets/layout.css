@@ -12,7 +12,7 @@ body{
   max-width: 1200px;
 }
 
-.center-w {
+.center-h {
   display: flex;
   justify-content: center;
 }
@@ -21,8 +21,15 @@ body{
   margin-top: 30%;
 }
 
-.flex {
-  display: flex;
-  justify-content: center;
+.inline {
+  display: inline-block;
+}
+
+.fixed{
+  position: fixed;
+}
+
+.center-v{
+  align-items: center; 
 }
 

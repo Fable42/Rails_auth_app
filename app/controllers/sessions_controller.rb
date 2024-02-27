@@ -11,7 +11,7 @@ class SessionsController < ApplicationController
     if user.present?
       session[:user_id] = user.id
 
-      redirect_to root_path
+      redirect_to root_path, notice: 'User signed in'
     else
       render :new
     end
@@ -20,6 +20,7 @@ class SessionsController < ApplicationController
   def destroy
     session.delete(:user_id)
 
-    redirect_to root_path
+    flash[:notice] = 'User logged out'
+    redirect_to action: "new"
   end
 end
