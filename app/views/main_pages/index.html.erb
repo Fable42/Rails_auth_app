@@ -1,11 +1,21 @@
-<h1> Main page</h1>
-
-<div>
+<div class="container">
   <% if current_user.present? %>
-    <%=  current_user.name %>
-    <%= button_to 'Sign out', session_path, method: :delete %>
+    <div class="mh-a cl-w">
+      <%=  current_user.name %>
+    </div>
+
+    <div class="mh-a">
+      <%= button_to 'Sign out', session_path, method: :delete %>
+    </div>
+
   <% else %>
-    <%= link_to 'Sign up', new_user_path %>
-    <%= link_to 'Sign in', new_session_path %>
+    <p>
+      <%= link_to 'Sign up', new_user_path %>
+    </p>
+
+    <p>
+      <%= link_to 'Sign in', new_session_path %>
+    </p>
+
   <% end %>
 </div>

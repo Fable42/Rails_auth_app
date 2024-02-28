@@ -4,10 +4,6 @@ body{
   justify-content: center;
 }
 
-.wrapper_sign_in_up {
-  max-width: 275px;
-}
-
 .wrapper {
   max-width: 1200px;
 }
@@ -17,8 +13,13 @@ body{
   justify-content: center;
 }
 
-.container {
-  margin-top: 30%;
+.container_sign {
+  max-width: 275px;
+}
+
+.container{
+  max-width: 1200px;
+  border: 1px solid white;
 }
 
 .inline {
@@ -29,7 +30,20 @@ body{
   position: fixed;
 }
 
-.center-v{
-  align-items: center; 
+.center-v-fixed {
+  position: fixed;
+  top: 50%;
+  -ms-transform: translateY(-55%);
+  transform: translateY(-55%);
 }
 
+.center{
+  display: flex; 
+  align-items: center; 
+  justify-content: space-between;
+}
+
+.center-v{
+  display: flex; 
+  align-items: center;
+}
