@@ -1,0 +1,21 @@
+<div class="container">
+  <% if current_user.present? %>
+    <div class="mh-a cl-w">
+      <%=  current_user.name %>
+    </div>
+
+    <div class="mh-a">
+      <%= button_to 'Sign out', session_path, method: :delete %>
+    </div>
+
+  <% else %>
+    <p>
+      <%= link_to 'Sign up', new_user_path %>
+    </p>
+
+    <p>
+      <%= link_to 'Sign in', new_session_path %>
+    </p>
+
+  <% end %>
+</div>

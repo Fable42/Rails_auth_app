@@ -1,0 +1,21 @@
+<div class = "container_sign center-v-fixed"> 
+  <%= form_with scope: :session, url:session_path do |form| %>
+    <div class="tittle-lg center-h">
+      <div class="cl-w">Tag</div>
+      <div class="cl-g">IT</div>  
+    </div>
+
+    <p><%= form.text_field :email, placeholder: 'Email', class: 'input_sign tittle-sm mt-lg '%></p>
+
+    <p><%= form.password_field :password, placeholder: 'Password', class: 'input_sign tittle-sm mt-sm ' %></p>
+
+    <p><%= form.submit "Sign In", class: 'button_sign mt-lg tittle-m'%></p>
+
+    <p class="center-h mt-ssm mb-ssm">
+      <span class="line-125 line-l"></span><span class="mv-a text-m cl-g">or</span><span class="line-125 line-r"></span>
+    </p>
+
+    <%= link_to 'Sign up', new_user_path, class: 'cl-w text-m center-h' %>
+  <% end %>
+</div>
+

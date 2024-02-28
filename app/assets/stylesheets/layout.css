@@ -1,0 +1,49 @@
+body{
+  background: black;
+  display: flex;
+  justify-content: center;
+}
+
+.wrapper {
+  max-width: 1200px;
+}
+
+.center-h {
+  display: flex;
+  justify-content: center;
+}
+
+.container_sign {
+  max-width: 275px;
+}
+
+.container{
+  max-width: 1200px;
+  border: 1px solid white;
+}
+
+.inline {
+  display: inline-block;
+}
+
+.fixed{
+  position: fixed;
+}
+
+.center-v-fixed {
+  position: fixed;
+  top: 50%;
+  -ms-transform: translateY(-55%);
+  transform: translateY(-55%);
+}
+
+.center{
+  display: flex; 
+  align-items: center; 
+  justify-content: space-between;
+}
+
+.center-v{
+  display: flex; 
+  align-items: center;
+}
