@@ -13,7 +13,8 @@ class SessionsController < ApplicationController
 
       redirect_to root_path, notice: 'User signed in'
     else
-      render :new
+      flash.now[:error] = 'Invalid email or password'
+      render :new, status: 422
     end
   end
 
